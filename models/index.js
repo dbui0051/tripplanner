@@ -3,53 +3,63 @@ const db = new Sequelize('postgres://localhost/tripplanner', {
   logging: false
 });
 
-module.exports = db
-
 const Place = db.define('place',  {
   address: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false
   },
   city: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false
   },
   phone: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false
   },
   location: {
-    type: Sequelize.ARRAY(sequelize.FLOAT)
+    type: Sequelize.ARRAY(Sequelize.FLOAT),
+    allowNull: false
   },
 })
 
 const Hotel = db.define ('hotel', {
   name: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false
   },
   num_stars: {
-    type: Sequelize.FLOAT
+    type: Sequelize.FLOAT,
+    allowNull: false
   },
   amenities: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false
   }
 });
 
 const Activity = db.define('activity', {
   name: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false
   },
   age_range: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false
   },
 });
 
 const Restaurant = db.define('restaurant', {
   name: {
-
+    type: Sequelize.STRING,
+    allowNull: false
   },
   cuisine: {
-
+    type: Sequelize.STRING,
+    allowNull: false
   },
   price: {
-
+    type: Sequelize.INTEGER,
+    allowNull: false
   }
 });
 
@@ -62,5 +72,6 @@ module.exports = {
   Place,
   Hotel,
   Activity,
-  Restaurant
+  Restaurant,
+  db
 }

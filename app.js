@@ -39,7 +39,7 @@ app.use((err, req, res, next) => {
   res.render('error', {err})
 })
 
-db.sync()
+db.db.sync()
   .then(() => {
     console.log('Database is sync`d')
     app.listen(PORT, () => console.log(`Listening intently on PORT: ${PORT}`))
