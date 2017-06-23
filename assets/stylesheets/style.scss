@@ -446,10 +446,24 @@ template {
   display: none;
 }
 
+.container  {
+  text {
+    display: block;
+  }
+  select {
+    display: block;
+  }
+
+}
+.col-md-4 {
+  width: 4/12 * 100%;
+}
+.col-md-12 {
+  width: 100%;
+}
 .col-md-8 {
   width: 8/12 * 100%;
 }
 
-.col-md-4 {
-  width: 4/12 * 100%;
-}
+
+

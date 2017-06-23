@@ -1,22 +1,54 @@
-{% extends "layout.html" %}
-{% block title %}Your Trip {% endblock %}
-{% block content %}
+{% extends "layout.html" %} {% block title %}Your Trip {% endblock %} {% block content %}
 <h1>Welcome to Trip Planner!</h1>
-<div class="row">
-  <select>
-  {% for hotel in hotels %}
-    <option value = "{{hotel.name}}">{{hotel.name}}</option>
-  {% endfor %}
-</select>
-  <select>
-  {% for restaurant in restaurants %}
-    <option value = "{{restaurant.name}}">{{restaurant.name}}</option>
-  {% endfor %}
-</select>
-  <select>
-  {% for activity in activities %}
-    <option value = "{{activity.name}}">{{activity.name}}</option>
-  {% endfor %}
-</select>
-</div>
-{% endblock %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">Map here</div>
+    <div class="col-md-4">
+      <div>
+        <text class="labels">Hotels</text>
+        <select>
+      {% for hotel in hotels %}
+        <option value = "{{hotel.name}}">{{hotel.name}}</option>
+      {% endfor %}
+    </select>
+        <text class="labels">Restaurants</text>
+        <select>
+      {% for restaurant in restaurants %}
+        <option value = "{{restaurant.name}}">{{restaurant.name}}</option>
+      {% endfor %}
+    </select>
+        <text class="labels">Activities</text>
+        <select>
+      {% for activity in activities %}
+        <option value = "{{activity.name}}">{{activity.name}}</option>
+      {% endfor %}
+     </select>
+      </div>
+      <div>
+
+        <text>Day 2</text>
+        <div>
+          <text class="labels">Hotels</text>
+          <select>
+      {% for hotel in hotels %}
+        <option value = "{{hotel.name}}">{{hotel.name}}</option>
+      {% endfor %}
+       </select>
+          <text class="labels">Restaurants</text>
+          <select>
+      {% for restaurant in restaurants %}
+        <option value = "{{restaurant.name}}">{{restaurant.name}}</option>
+      {% endfor %}
+    </select>
+          <text class="labels">Activities</text>
+          <select>
+      {% for activity in activities %}
+        <option value = "{{activity.name}}">{{activity.name}}</option>
+      {% endfor %}
+     </select>
+        </div>
+        <div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}

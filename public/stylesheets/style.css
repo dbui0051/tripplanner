@@ -389,8 +389,17 @@ template {
 [hidden] {
   display: none; }
 
-.col-md-8 {
-  width: 66.66667%; }
+.container text {
+  display: block; }
+
+.container select {
+  display: block; }
 
 .col-md-4 {
   width: 33.33333%; }
+
+.col-md-12 {
+  width: 100%; }
+
+.col-md-8 {
+  width: 66.66667%; }
