@@ -457,12 +457,26 @@ template {
 }
 .col-md-4 {
   width: 4/12 * 100%;
+  background: beige;
 }
 .col-md-12 {
   width: 100%;
 }
 .col-md-8 {
   width: 8/12 * 100%;
+  height: 100vh;
+}
+
+.selector-div {
+  background: lightgrey;
+}
+
+.days {
+  padding: 20px;
+  text {
+    border: 1px black solid;
+    border-radius: 5px;
+  }
 }
 
 
